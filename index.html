@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href ="index.css"\ >
+    <script src="index.js"  type="module" defer></script>
+    <title>Parcial de crypto</title>
+</head>
+<body>
+    <header>
+        <div class="miNav">
+            <div class ="barra">
+                <img src ="Cryptos/logo.svg" alt ="Logo principal">
+                <nav >
+                    <il><a> Nosotros</a></il>
+                    <il><a> Anuncios</a></il>
+                    <il><a> Contacto</a></il>
+                    <il><a> Blog</a></il>
+                </nav>
+            </div>
+        </div>
+        <div class="flex1"> Administrador de monedas</div>
+    </header>
+
+    <div id ="divForm" class="Div-Formulario">
+        <div class="GENERAL" id="general">
+                    <form class="flex1" id ="miFormulario" method ="post">
+                        <label class="Titulo-formulario"> Informacion de la moneda</label>
+                        <div class="">
+                            <label for ="nombre">Nombre</label>
+                            <input 
+                                type ="text"
+                                required
+                                name="nombre"
+                                id="nombre"
+                                placeholder="ingrese nombre..."
+                            \>
+                        </div>
+                        <div class="">
+                            <label for ="simbolo">Simbolo</label>
+                            <input 
+                                placeholder="ingrese simbolo..."
+                                type="text"
+                                required
+                                name="simbolo"
+                                id="simbolo"
+                            \>
+                        </div>
+                        <div class="">
+                            <label for ="PrecioActual">Precio actual (USD)</label> 
+                            <input 
+                            type="text"
+                            required
+                            name="PrecioActual"
+                            id="PrecioActual"
+                            placeholder="ingrese una descripcion..."
+                            \>
+                        </div>
+                        <div class="">
+                            <label for="tipoDeCpncenso">Tipo de concenso</label>
+                            <select name="select"
+                            required
+                            name ="tipoDeCpncenso"
+                            id ="tipoDC"
+                            >
+                                <option>‘Proof of Work</option>
+                                <option>‘Proof of Stake’ </option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <label for ="cantidadC">Cantidad en circulacion</label>
+                            <input 
+                                type ="text"
+                                required
+                                name="cantidadC"
+                                id="cantidadC"
+                                placeholder="ingrese una cantidad..."
+                            \>
+                        </div>
+                        <div class="">
+                            <label for = "algoritmo">Algoritmo</label>
+                            <select name="algoritmo"
+                            required
+                            name ="algoritmo"
+                            id ="algoritmo"
+                            >
+                                <option>SHA-256</option>
+                                <option>Ethash</option>
+                                <option>Scrypt</option>
+                                <option>X11</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <label>Sitio Web Oficial</label>
+                            <input 
+                                type ="text"
+                                required
+                                name="SWO"
+                                id="SWO"
+                                placeholder="ingrese un SWO..."
+                            \>
+                        </div>
+                        
+                        <div class="">
+                            <button class ="btn-guardar">Guardar</button>
+                            <button class ="btn-cancelar">Cancelar</button>
+                            <button class ="btn-eliminar">Eliminar</button>
+                        </div>
+                    </form>
+              
+               
+            
+        </div>
+
+    </div>
+
+    <div id = "divTabla" class ="div-tabla">
+
+    </div>
+</body>
+<footer class="foot">
+    <a>Nosotros </a>
+    <a> Anuncio </a>
+    <a> Blog </a>
+    <a> Contacto </a>
+</footer>
+</html>
