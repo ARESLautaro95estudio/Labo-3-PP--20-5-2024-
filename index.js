@@ -48,19 +48,37 @@ function altaMoneda(e)
 function InstancioMoneda()
 {
     const formulario = document.getElementById("miFormulario");
-    const coin = new Crypto(
-        new Date(),
-        formulario.nombre.value,
-        formulario.simbolo.value,
-        new Date(),
-        formulario.PrecioActual.value,
-        formulario.tipoDC.value,
-        formulario.algoritmo.value,
-        formulario.SWO.value,
-        formulario.cantidadC.value
-    );
-    dataLocal.push(coin);
-    guardarEnStorage(dataLocal);
+    if(validar(formulario))
+        {
+            const coin = new Crypto(
+                new Date(),
+                formulario.nombre.value,
+                formulario.simbolo.value,
+                new Date(),
+                formulario.PrecioActual.value,
+                formulario.tipoDC.value,
+                formulario.algoritmo.value,
+                formulario.SWO.value,
+                formulario.cantidadC.value
+            );
+            dataLocal.push(coin);
+            guardarEnStorage(dataLocal);
+        }
+        else
+        {
+            alert("faltan campos por rellenar");
+        }
+}
+
+function validar(formulario){
+    if(parseInt( formulario.PrecioActual.value)>=0 && parseInt( formulario.cantidadC.value)>=0 )
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 function cargarTabla()
 {
